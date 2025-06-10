@@ -3,10 +3,9 @@ Possible Bodies VR Workshop HEAD + Swiss Paraplegic Foundation
 
 ### Ayoub Azzouzi, Karina Wolff
 
-* apk Release page: 
+* apk Release page: https://github.com/kLMWOLFF/Daata/releases/latest
 
-Github
-https://github.com/kLMWOLFF/Daata.git
+* Github: https://github.com/kLMWOLFF/Daata.git
 
 ## Tagline
 In a realm of infinite possibilities that exists between mind and matter, you are gravity.
