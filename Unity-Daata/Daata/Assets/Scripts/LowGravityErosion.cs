@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DisappearTimer : MonoBehaviour
+public class LowGravityErosion : MonoBehaviour
 {
     public GameObject cloudObject;
     public float checkDistance = 35f;
@@ -12,13 +12,13 @@ public class DisappearTimer : MonoBehaviour
     private bool hasDisappeared = false;
 
     private EnvironmentTracker envTracker;
-    private BlinkController blink;
+    private BlinkEnvironment blink;
 
     void Start()
     {
         timer = countdownTime;
         envTracker = FindObjectOfType<EnvironmentTracker>();
-        blink = GetComponent<BlinkController>();
+        blink = GetComponent<BlinkEnvironment>();
 
         if (envTracker == null)
             Debug.LogError("EnvironmentTracker not found.");
@@ -41,8 +41,8 @@ public class DisappearTimer : MonoBehaviour
             if (!countdownStarted)
             {
                 countdownStarted = true;
-                blink?.StartBlinking();
-                if (!moveSound.isPlaying) moveSound.Play();
+                if (blink != null) blink.isBlinkingAllowed = true;
+                if (moveSound != null && !moveSound.isPlaying) moveSound.Play();
             }
 
             timer -= Time.deltaTime;
@@ -51,8 +51,8 @@ public class DisappearTimer : MonoBehaviour
             {
                 gameObject.SetActive(false);
                 hasDisappeared = true;
-                blink?.StopBlinking();
-                if (moveSound.isPlaying) moveSound.Stop();
+                if (blink != null) blink.isBlinkingAllowed = false;
+                if (moveSound != null && moveSound.isPlaying) moveSound.Stop();
             }
         }
         else
@@ -66,8 +66,7 @@ public class DisappearTimer : MonoBehaviour
         timer = countdownTime;
         countdownStarted = false;
         hasDisappeared = false;
-        blink?.StopBlinking();
-        if (moveSound.isPlaying) moveSound.Stop();
+        if (blink != null) blink.isBlinkingAllowed = false;
+        if (moveSound != null && moveSound.isPlaying) moveSound.Stop();
     }
 }
-
