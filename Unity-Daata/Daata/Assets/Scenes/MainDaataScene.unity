@@ -478,8 +478,8 @@ CapsuleCollider:
   m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 0.5
+  m_Radius: 0.1
+  m_Height: 0.1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &128721068
@@ -566,8 +566,8 @@ CapsuleCollider:
   m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 0.5
+  m_Radius: 0.1
+  m_Height: 0.1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &136372049
@@ -794,7 +794,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 222624121507496820, guid: bd3eb068751654f419eb45eb65ac5ea3, type: 3}
       propertyPath: ShapeModule.type
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 222624121507496820, guid: bd3eb068751654f419eb45eb65ac5ea3, type: 3}
       propertyPath: InitialModule.size3D
@@ -1171,8 +1171,8 @@ CapsuleCollider:
   m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 0.5
+  m_Radius: 0.1
+  m_Height: 0.1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &246945648
@@ -2605,7 +2605,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 222624121507496820, guid: bd3eb068751654f419eb45eb65ac5ea3, type: 3}
       propertyPath: ShapeModule.type
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 222624121507496820, guid: bd3eb068751654f419eb45eb65ac5ea3, type: 3}
       propertyPath: InitialModule.size3D
@@ -2730,6 +2730,14 @@ PrefabInstance:
     - target: {fileID: 6455661856520740580, guid: bd3eb068751654f419eb45eb65ac5ea3, type: 3}
       propertyPath: m_SortingFudge
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7162770225706439914, guid: bd3eb068751654f419eb45eb65ac5ea3, type: 3}
+      propertyPath: farLimit
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 7162770225706439914, guid: bd3eb068751654f419eb45eb65ac5ea3, type: 3}
+      propertyPath: nearLimit
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7162770225706439914, guid: bd3eb068751654f419eb45eb65ac5ea3, type: 3}
       propertyPath: insideColor.b
@@ -14653,7 +14661,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 222624121507496820, guid: bd3eb068751654f419eb45eb65ac5ea3, type: 3}
       propertyPath: ShapeModule.type
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 222624121507496820, guid: bd3eb068751654f419eb45eb65ac5ea3, type: 3}
       propertyPath: InitialModule.size3D
@@ -15929,7 +15937,7 @@ MeshCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
   m_Convex: 0
@@ -18554,7 +18562,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 222624121507496820, guid: bd3eb068751654f419eb45eb65ac5ea3, type: 3}
       propertyPath: ShapeModule.type
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 222624121507496820, guid: bd3eb068751654f419eb45eb65ac5ea3, type: 3}
       propertyPath: InitialModule.size3D
