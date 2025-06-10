@@ -63,7 +63,7 @@ public class UpDirectionCloudTrigger : MonoBehaviour
                     currentEnvironment.SetActive(false); // Fully disable
                     environmentPermanentlyDisabled = true;
 
-                    soundEffects[0]?.Stop();
+
                 }
 
                 if (cloudToSpawn != null && !cloudToSpawn.activeSelf)
@@ -73,6 +73,8 @@ public class UpDirectionCloudTrigger : MonoBehaviour
 
                 hasTriggered = true;
                 isBlinking = false;
+                
+                soundEffects[0]?.Stop();
             }
         }
         else
@@ -89,6 +91,7 @@ public class UpDirectionCloudTrigger : MonoBehaviour
         if (isBlinking && currentEnvironment != null && !environmentPermanentlyDisabled)
         {
             currentEnvironment.SetActive(true);
+            soundEffects[0]?.Stop();
         }
 
         isBlinking = false;
